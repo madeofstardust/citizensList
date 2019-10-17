@@ -19,11 +19,14 @@ class main:
           "In first line, input The city. In the second one, input the name, surname and PESEL of the citizen. \n"
           "Please be sure to type only english letters! \n"
           "The output of this program can be seen in C:/Users/weron/PycharmProjects/citizenList.txt file. Enjoy!")
-
+    x = input("But first, write a full path to the directory You want your file to be in:")
+    z = str(x)+"/citizenList.txt"
     # So first, let's create a file:
-    if os.path.exists("C:/Users/weron/PycharmProjects/citizenList.txt"):
-        os.remove("C:/Users/weron/PycharmProjects/citizenList.txt")
-    f = open("C:/Users/weron/PycharmProjects/citizenList.txt", "w+")
+    if os.path.exists(z):
+        os.remove(z)
+    f = open(z, "w+")
+
+    print("Thank You! Now feel free to input Your data:")
 
     # time checking
     sTime = time.time()
